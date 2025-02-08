@@ -15,7 +15,7 @@ def main():
 
 
     with st.expander("but first, look at a cute picture of us from Podgorica😍"):
-       st.image(our_cute_pic, use_container_width=5)
+       st.image(our_cute_pic, use_container_width=True)
        st.write("ok ok, now lets go to the actual question")
 
    
@@ -31,7 +31,7 @@ def main():
         if st.button("Yes! 💘"):
             st.session_state.response = "Yes"
             st.balloons()
-            st.success("Yay! I knew you'd say yes! 😍")
+            st.success("Yay! I knew you'd say yes! muah")
     
     with col2:
         if st.button("No...😡"):
