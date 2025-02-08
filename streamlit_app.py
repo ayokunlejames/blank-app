@@ -13,31 +13,29 @@ def main():
     # Write text with custom size
     st.markdown("<h2 style='font-size: 30px;'>Timi baby, I just wanted to ask you a quick question...</h2>", unsafe_allow_html=True)
 
-
-    with st.expander("but first, look at a cute picture of us from Podgorica😍"):
+    st.write("but first, look at a cute picture of us from Podgorica😍")
+    with st.expander("click click"):
        st.image(our_cute_pic, use_container_width=True)
-       st.write("ok ok, now lets go to the actual question")
+       
+    with st.expander("ok ok, now lets go to the actual question"):
+       st.write("**Will you be my Valentine? 🌚💖**")
 
-   
-    st.write("**Will you be my Valentine? 🌚💖**")
-
-    # Display buttons and handle logic as before
-    col1, col2 = st.columns(2)
+       # Display buttons and handle logic as before
+       col1, col2 = st.columns(2)
     
-    if 'response' not in st.session_state:
+       if 'response' not in st.session_state:
         st.session_state.response = None
 
-    with col1:
-        if st.button("Yes! 💘"):
-            st.session_state.response = "Yes"
-            st.balloons()
-            st.success("Yay! I knew you'd say yes! muah😘")
+       with col1:
+           if st.button("Yes! 💘"):
+               st.session_state.response = "Yes"
+               st.balloons()
+               st.success("Yay! I knew you'd say yes! muah😘")
     
-    with col2:
-        if st.button("No...😡"):
-            st.session_state.response = "No"
-            st.write("Wrong answer..let's try this again uhn 🫠")
-
+       with col2:
+           if st.button("No...😡"):
+               st.session_state.response = "No"
+               st.write("Wrong answer..let's try this again uhn 🫠")
 
 if __name__ == "__main__":
     main()
