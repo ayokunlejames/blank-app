@@ -28,7 +28,7 @@ def main():
                 padding-bottom: 2rem;
             }}
             h1, h2, h3, p {{
-                color: white;  # Text color to make sure it's visible on the image
+                color: black;  # Text color to make sure it's visible on the image
                 font-family: 'Helvetica', sans-serif;
             }}
         </style>
