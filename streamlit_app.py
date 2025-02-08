@@ -19,7 +19,7 @@ def main():
                 padding-bottom: 2rem;
             }
             h1, h2, h3, p {
-                color: black;
+                color: white;
                 font-family: 'Helvetica', sans-serif;
             }
         </style>
@@ -34,26 +34,26 @@ def main():
     
     col1, col2 = st.columns(2)
     
-    # Manage the state of the rerun
-    if 'rerun_triggered' not in st.session_state:
-        st.session_state.rerun_triggered = False
+    # If the button hasn't been clicked before, initialize the session state
+    if 'response' not in st.session_state:
+        st.session_state.response = None
 
     with col1:
         if st.button("Yes! 💘"):
+            st.session_state.response = "Yes"
             st.balloons()
             st.success("Yay! I knew you'd say yes! 😍")
     
     with col2:
         if st.button("No...😡"):
+            st.session_state.response = "No"
             st.write("Wrong answer..let's try this again uhn 🫠")
-            time.sleep(2)
-            # Mark the state before rerun
-            st.session_state.rerun_triggered = True
-            # Rerun the app
-            st.experimental_rerun()
 
-    if st.session_state.rerun_triggered:
-        st.session_state.rerun_triggered = False  # Reset after rerun
+    # If a response has been recorded, show the corresponding output
+    if st.session_state.response == "No":
+        st.write("Try again, I know you can say yes! 😉")
+    elif st.session_state.response == "Yes":
+        st.write("You made my day! 😘")
 
 if __name__ == "__main__":
     main()
