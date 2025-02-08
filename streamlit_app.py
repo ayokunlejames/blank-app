@@ -5,16 +5,16 @@ from PIL import Image
 our_cute_pic = Image.open('IMG_3103.jpeg')
 
 def main():
-st.image(our_cute_pic, use_column_width=5)
+    st.image(our_cute_pic, use_column_width=5)
 
-# Title with bigger text
-# st.markdown("<h1 style='font-size: 40px;'>💕 Timi, Will You Be My Valentine? 💕</h1>", unsafe_allow_html=True)
+    # Title with bigger text
+    # st.markdown("<h1 style='font-size: 40px;'>💕 Timi, Will You Be My Valentine? 💕</h1>", unsafe_allow_html=True)
     
-# Write text with custom size
-st.markdown("<h2 style='font-size: 30px;'>Timi baby, I just wanted to ask you a quick question...</h2>", unsafe_allow_html=True)
-st.write("Will you be my Valentine? 🌚💖")
+    # Write text with custom size
+    st.markdown("<h2 style='font-size: 30px;'>Timi baby, I just wanted to ask you a quick question...</h2>", unsafe_allow_html=True)
+    st.write("Will you be my Valentine? 🌚💖")
 
-# Display buttons and handle logic as before
+    # Display buttons and handle logic as before
     col1, col2 = st.columns(2)
     
     if 'response' not in st.session_state:
