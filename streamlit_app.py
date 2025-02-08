@@ -4,9 +4,15 @@ import io
 import base64
 
 def main():
-    # Load and encode the image in base64
-    image_path = "IMG_3103.jpeg"
-    image = Image.open(image_path)
+    # Load and encode the image in base64 (for local images)
+    image_path = "IMG_3103.jpeg"  # Ensure this is the correct path to your image
+    try:
+        image = Image.open(image_path)
+    except FileNotFoundError:
+        st.error("Image file not found. Please check the file path.")
+        return
+
+    # Convert image to base64
     img_bytes = io.BytesIO()
     image.save(img_bytes, format="JPEG")
     img_base64 = base64.b64encode(img_bytes.getvalue()).decode("utf-8")
@@ -19,6 +25,7 @@ def main():
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
+                background-attachment: fixed;  # Keeps the image fixed during scrolling
                 height: 100vh;  # Ensure the background covers the entire viewport
             }}
             .block-container {{
@@ -33,6 +40,9 @@ def main():
             }}
         </style>
     """, unsafe_allow_html=True)
+
+
+    
     # Title with bigger text
     st.markdown("<h1 style='font-size: 40px;'>💕 Timi, Will You Be My Valentine? 💕</h1>", unsafe_allow_html=True)
     
