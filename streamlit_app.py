@@ -14,11 +14,11 @@ def main():
     with col1:
         if st.button("Yes! 💘"):
             st.balloons()
-            st.success("Yay! I knew you'd say yes! 😍")
+            st.success("Yay! I knew you'd say yes! 🌚😍")
     
     with col2:
-        if st.button("No..."):
-            st.write("Wrong answer..let's try this again!")
+        if st.button("No...😡"):
+            st.write("Wrong answer..let's try this again uhn 🫠")
             time.sleep(2)
             st.experimental_rerun()
 
