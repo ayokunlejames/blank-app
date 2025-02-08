@@ -5,7 +5,7 @@ from PIL import Image
 our_cute_pic = Image.open('IMG_3103.jpeg')
 
 def main():
-    st.image(our_cute_pic, use_column_width=5)
+    st.image(our_cute_pic, use_container_width=5)
 
     # Title with bigger text
     # st.markdown("<h1 style='font-size: 40px;'>💕 Timi, Will You Be My Valentine? 💕</h1>", unsafe_allow_html=True)
