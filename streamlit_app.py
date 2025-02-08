@@ -13,8 +13,7 @@ def main():
     # Write text with custom size
     st.markdown("<h2 style='font-size: 30px;'>Timi baby, I just wanted to ask you a quick question...</h2>", unsafe_allow_html=True)
 
-    st.write("but first, look at a cute picture of us from Podgorica😍")
-    with st.expander("click click"):
+    with st.expander("but first, look at a cute picture of us from Podgorica😍"):
        st.image(our_cute_pic, use_container_width=True)
        
     with st.expander("ok ok, now lets go to the actual question"):
