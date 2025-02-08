@@ -31,7 +31,7 @@ def main():
         if st.button("Yes! 💘"):
             st.session_state.response = "Yes"
             st.balloons()
-            st.success("Yay! I knew you'd say yes! muah")
+            st.success("Yay! I knew you'd say yes! muah😘")
     
     with col2:
         if st.button("No...😡"):
