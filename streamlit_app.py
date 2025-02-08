@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 # Load your logo
-our_cute_pic = Image.open('IMG_3103.jpeg')
+our_cute_pic = Image.open('IMG_3092.jpeg')
 
 def main():
    
