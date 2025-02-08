@@ -6,15 +6,15 @@ def main():
     
     st.image("IMG_3103.jpeg", use_container_width=True)
     
-    st.write("Hey love, I just wanted to ask you something really special...")
-    st.write("Will you be my Valentine? 💖")
+    st.write("Hey baby, I just wanted to ask you a quick question...")
+    st.write("Will you be my Valentine? 🌚💖")
     
     col1, col2 = st.columns(2)
     
     with col1:
         if st.button("Yes! 💘"):
             st.balloons()
-            st.success("Yay! I knew you'd say yes! 🌚😍")
+            st.success("Yay! I knew you'd say yes! 😍")
     
     with col2:
         if st.button("No...😡"):
