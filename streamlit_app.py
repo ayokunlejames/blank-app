@@ -4,7 +4,7 @@ import time
 def main():
     st.title("💕 Timi, Will You Be My Valentine? 💕")
     
-    st.image("IMG_3103.jpeg", use_container_width=True)
+    st.image("IMG_2890.jpeg", use_container_width=True)
     
     st.write("Hey baby, I just wanted to ask you a quick question...")
     st.write("Will you be my Valentine? 🌚💖")
