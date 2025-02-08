@@ -24,7 +24,13 @@ def main():
         if st.button("No...😡", key="no_button"):
             st.write("Wrong answer..let's try this again uhn 🫠")
             time.sleep(2)
+            # Mark the state before rerun
+            st.session_state.rerun_triggered = True
+            # Rerun the app
             st.experimental_rerun()
+
+    if st.session_state.rerun_triggered:
+        st.session_state.rerun_triggered = False 
 
 if __name__ == "__main__":
     main()
