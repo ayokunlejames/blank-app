@@ -48,11 +48,6 @@ def main():
             st.session_state.response = "No"
             st.write("Wrong answer..let's try this again uhn 🫠")
 
-    # If a response has been recorded, show the corresponding output
-    if st.session_state.response == "No":
-        st.write("Try again, I know you can say yes! 😉")
-    elif st.session_state.response == "Yes":
-        st.write("You made my day! 😘")
 
 if __name__ == "__main__":
     main()
