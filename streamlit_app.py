@@ -4,7 +4,7 @@ import time
 def main():
     st.title("💕 Timi, Will You Be My Valentine? 💕")
     
-    st.image("https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif", use_container_width=True)
+    st.image("IMG_3103.jpeg", use_container_width=True)
     
     st.write("Hey love, I just wanted to ask you something really special...")
     st.write("Will you be my Valentine? 💖")
