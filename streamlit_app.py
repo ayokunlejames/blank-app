@@ -16,7 +16,9 @@ def main():
 
     with st.expander("but first, look at a cute picture of us from Podgorica😍"):
        st.image(our_cute_pic, use_container_width=5)
-    
+       st.write("ok ok, now lets go to the actual question")
+
+   
     st.write("**Will you be my Valentine? 🌚💖**")
 
     # Display buttons and handle logic as before
