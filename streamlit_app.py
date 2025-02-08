@@ -1,34 +1,58 @@
 import streamlit as st
-import time
 
 def main():
-    # Title with bigger text
-    st.markdown("<h1 style='font-size: 40px;'>💕 Timi baby, Will You Be My Valentine? 💕</h1>", unsafe_allow_html=True)
+    # Set background image using CSS
+    st.markdown("""
+        <style>
+            .reportview-container {
+                background-image: url("IMG_3103.jpeg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh;  # Ensure the background covers the entire viewport
+            }
+            .block-container {
+                padding-top: 5rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-bottom: 2rem;
+            }
+            h1, h2, h3, p {
+                color: white;  # Text color to make sure it's visible on the image
+                font-family: 'Helvetica', sans-serif;
+            }
+        </style>
+    """, unsafe_allow_html=True)
     
-   
-     # Display a slider to control the image size
-    image_width = st.slider("Select image width", min_value=100, max_value=1000, value=500)
-
-    # Display the image with the selected width
-    st.image("IMG_3103.jpeg", width=image_width)
+    # Title with bigger text
+    st.markdown("<h1 style='font-size: 40px;'>💕 Timi, Will You Be My Valentine? 💕</h1>", unsafe_allow_html=True)
     
     # Write text with custom size
-    # st.markdown("<h2 style='font-size: 30px;'>Hey baby, I just wanted to ask you a quick question...</h2>", unsafe_allow_html=True)
-    # st.markdown("<h3 style='font-size: 25px;'>Will you be my Valentine? 🌚💖</h3>", unsafe_allow_html=True)
-    
+    st.markdown("<h2 style='font-size: 30px;'>Hey baby, I just wanted to ask you a quick question...</h2>", unsafe_allow_html=True)
+    st.markdown("<h3 style='font-size: 25px;'>Will you be my Valentine? 🌚💖</h3>", unsafe_allow_html=True)
+
+    # Display buttons and handle logic as before
     col1, col2 = st.columns(2)
     
-    # Customize buttons with bigger size using custom HTML
+    if 'response' not in st.session_state:
+        st.session_state.response = None
+
     with col1:
-        if st.button("Yes! 💘", key="yes_button"):
+        if st.button("Yes! 💘"):
+            st.session_state.response = "Yes"
             st.balloons()
             st.success("Yay! I knew you'd say yes! 😍")
     
     with col2:
-        if st.button("No...😡", key="no_button"):
+        if st.button("No...😡"):
+            st.session_state.response = "No"
             st.write("Wrong answer..let's try this again uhn 🫠")
-            time.sleep(2)
-            st.experimental_rerun()
+
+    # If a response has been recorded, show the corresponding output
+    if st.session_state.response == "No":
+        st.write("Try again, I know you can say yes! 😉")
+    elif st.session_state.response == "Yes":
+        st.write("You made my day! 😘")
 
 if __name__ == "__main__":
     main()
