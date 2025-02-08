@@ -1,4 +1,3 @@
-# from PIL import image
 import streamlit as st
 import time
 
@@ -7,10 +6,6 @@ def main():
     
     st.image("IMG_3103.jpeg", use_container_width=True)
     
-    #image = Image.open("IMG_2890.jpeg")
-    #image = image.transpose(Image.Transpose.EXIF)  # Corrects orientation based on EXIF metadata
-
-    st.image(image, use_container_width=True)
     st.write("Hey baby, I just wanted to ask you a quick question...")
     st.write("Will you be my Valentine? 🌚💖")
     
