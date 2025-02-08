@@ -19,7 +19,7 @@ def main():
                 padding-bottom: 2rem;
             }
             h1, h2, h3, p {
-                color: white;
+                color: black;
                 font-family: 'Helvetica', sans-serif;
             }
         </style>
