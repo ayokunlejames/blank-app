@@ -11,13 +11,13 @@ def main():
     # st.markdown("<h1 style='font-size: 40px;'>💕 Timi, Will You Be My Valentine? 💕</h1>", unsafe_allow_html=True)
     
     # Write text with custom size
-    st.markdown("<h2 style='font-size: 30px;'>Timi baby, I just wanted to ask you a quick question...but first</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='font-size: 30px;'>Timi baby, I just wanted to ask you a quick question...</h2>", unsafe_allow_html=True)
 
 
-    with st.expander("**Look at a cute picture of us from Podgorica😍**"):
+    with st.expander("but first, look at a cute picture of us from Podgorica😍"):
        st.image(our_cute_pic, use_container_width=5)
     
-    st.write("Will you be my Valentine? 🌚💖")
+    st.write("**Will you be my Valentine? 🌚💖**")
 
     # Display buttons and handle logic as before
     col1, col2 = st.columns(2)
