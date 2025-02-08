@@ -48,7 +48,7 @@ def main():
     
     # Write text with custom size
     st.markdown("<h2 style='font-size: 30px;'>Timi baby, I just wanted to ask you a quick question...</h2>", unsafe_allow_html=True)
-    st.markdown("<h3 style='font-size: 25px;'>Will you be my Valentine? 🌚💖</h3>", unsafe_allow_html=True)
+    st.write("Will you be my Valentine? 🌚💖")
 
     # Display buttons and handle logic as before
     col1, col2 = st.columns(2)
