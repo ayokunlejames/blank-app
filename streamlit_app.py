@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 # Load your logo
-our_cute_pic = Image.open('IMG_3092.jpeg')
+# our_cute_pic = Image.open('IMG_3092.jpeg')
 
 def main():
    
@@ -14,7 +14,7 @@ def main():
     st.markdown("<h2 style='font-size: 30px;'>Timi baby, I just wanted to ask you a quick question...</h2>", unsafe_allow_html=True)
 
     with st.expander("but first, look at a cute picture of us from Podgorica😍"):
-       st.image(our_cute_pic, use_container_width=True)
+       st.image("https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif", use_container_width=True)
        
     with st.expander("ok ok, now lets go to the actual question"):
        st.write("**Will you be my Valentine? 🌚💖**")
